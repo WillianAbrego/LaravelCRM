@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('task_status')->default('Abierto');
             $table->foreignId('user_id')->nullable()->constrained();
             $table->foreignId('client_id')->nullable()->constrained();
-            $table->foreignId('proyect_id')->nullable()->constrained();
+            $table->foreignId('project_id')->nullable()->constrained();
             $table->timestamps();
             $table->softDeletes();
         });

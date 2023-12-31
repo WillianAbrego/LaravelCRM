@@ -18,6 +18,19 @@ class Task extends Model
         'task_status',
         'user_id',
         'client_id',
-        'proyect_id',
+        'project_id',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class)->withDefault();
+    }
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class)->withDefault();
+    }
+    public function project()
+    {
+        return $this->belongsTo(Project::class)->withDefault();
+    }
 }
