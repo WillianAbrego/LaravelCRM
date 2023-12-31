@@ -24,6 +24,9 @@
   <script src="{{ asset('css/plugin/css/jquery.min.js') }}"></script>
   <script src="{{ asset('css/plugin/css/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('css/plugin/css/adminlte.min.js') }}"></script>
+  <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
+    {{ csrf_field() }}
+  </form>
 </body>
 
 </html>
