@@ -40,7 +40,9 @@
                       <td>{{ $user->name }}</td>
                       <td>{{ $user->email }}</td>
                       <td>{{ $user->email_verified_at }}</td>
-                      <td></td>
+                      <td>
+                        <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-success">Editar</a>
+                      </td>
                     </tr>
                   @endforeach
                 </tbody>
