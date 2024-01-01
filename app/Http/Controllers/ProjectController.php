@@ -42,7 +42,8 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        //
+        Project::create($request->validated());
+        return redirect()->route('admin.projects.index')->with('success', 'Proyecto creado exitosamente');
     }
 
     /**
