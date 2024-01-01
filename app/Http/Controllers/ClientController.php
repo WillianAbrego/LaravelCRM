@@ -37,7 +37,9 @@ class ClientController extends Controller
      */
     public function store(StoreClientRequest $request)
     {
-        //
+
+        Client::create($request->validated());
+        return redirect()->route('admin.clients.index')->with('success', 'Cliente creado exitosamente');
     }
 
     /**
