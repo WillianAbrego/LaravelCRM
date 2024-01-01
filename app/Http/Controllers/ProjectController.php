@@ -65,7 +65,9 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        $users = User::all();
+        $clients = Client::all();
+        return view('admin.projects.edit', compact('users', 'clients', 'project'));
     }
 
     /**
@@ -77,7 +79,8 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        $project->update($request->validated());
+        return redirect()->route('admin.projects.index')->with('success', 'Proyecto editado exitosamente');
     }
 
     /**
@@ -88,6 +91,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return back();
     }
 }
