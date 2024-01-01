@@ -24,7 +24,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
-              <a href="{{ route('admin.clients.create') }}" class="btn btn-primary mb-3">Nuevo Usuario</a>
+              <a href="{{ route('admin.clients.create') }}" class="btn btn-primary mb-3">Nuevo Cliente</a>
               <table class="table table-bordered" id="client_table">
                 <thead>
                   <tr>
