@@ -73,7 +73,9 @@ class ClientController extends Controller
      */
     public function update(UpdateClientRequest $request, Client $client)
     {
-        //
+        $client->update($request->validated());
+
+        return redirect()->route('admin.clients.index')->with('success', 'Cliente editado exitosamente');
     }
 
     /**

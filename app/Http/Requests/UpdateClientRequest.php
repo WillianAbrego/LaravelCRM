@@ -13,7 +13,7 @@ class UpdateClientRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,26 @@ class UpdateClientRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'contact_name' => [
+                'required'
+            ],
+            'contact_email' => [
+                'required',
+                'unique:clients,contact_email,' . $this->client->id
+            ],
+            'contact_phone_number' => [
+                'required',
+            ],
+            'company_name' => [
+                'required'
+            ],
+            'company_email' => [
+                'required',
+                'unique:clients,contact_email'
+            ],
+            'company_phone_number' => [
+                'required',
+            ],
         ];
     }
 }
