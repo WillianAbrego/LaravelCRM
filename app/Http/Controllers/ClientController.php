@@ -61,7 +61,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        //
+        return view('admin.clients.edit', compact('client'));
     }
 
     /**
@@ -84,6 +84,7 @@ class ClientController extends Controller
      */
     public function destroy(Client $client)
     {
-        //
+        $client->delete();
+        return back();
     }
 }
