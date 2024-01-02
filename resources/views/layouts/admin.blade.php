@@ -45,8 +45,20 @@
       flatpickr(".date", {
         "locale": "es"
       });
+
       $('.select2').select2();
     })
+    Object.assign(DataTable.defaults, {
+      language: {
+        url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/es-ES.json',
+      },
+      columnDefs: [{
+        targets: -1,
+        searching: false,
+        orderable: false,
+      }, ]
+
+    });
   </script>
   @yield('scripts')
 </body>
