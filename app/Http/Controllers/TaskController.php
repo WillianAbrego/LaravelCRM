@@ -67,7 +67,11 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        //
+        $users = User::all();
+        $clients = Client::all();
+        $projects = Project::all();
+
+        return view('admin.tasks.edit', compact('users', 'clients', 'projects', 'task'));
     }
 
     /**
@@ -79,7 +83,8 @@ class TaskController extends Controller
      */
     public function update(UpdateTaskRequest $request, Task $task)
     {
-        //
+        $task->update($request->validated());
+        return redirect()->route('admin.tasks.index')->with('success', 'Tarea editada exitosamente');
     }
 
     /**
@@ -90,6 +95,7 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        //
+        $task->delete();
+        return back();
     }
 }
