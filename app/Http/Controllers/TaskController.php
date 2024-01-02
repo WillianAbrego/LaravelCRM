@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
+use App\Models\Client;
+use App\Models\Project;
+use App\Models\User;
 
 class TaskController extends Controller
 {
@@ -27,7 +30,10 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+        $users = User::all();
+        $clients = Client::all();
+        $projects = Project::all();
+        return view('admin.tasks.create', compact('users', 'clients', 'projects'));
     }
 
     /**
@@ -38,7 +44,8 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request)
     {
-        //
+        Task::create($request->validated());
+        return redirect()->route('admin.tasks.index')->with('success', 'Tarea creada exitosamente');
     }
 
     /**
