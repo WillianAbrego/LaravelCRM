@@ -91,15 +91,26 @@ Posteriormente ingresar a http://127.0.0.1:8000/login e ingresar las credenciale
 
 ## Vista para usuario y creación de usuario 
 
-
+| vista  | creación  |   
+|---|---|
+|  ![user](assets/usuario.png)|![create](assets/CreacionUsuario.png) | 
 
 ## Vista para cliente y creación de cliente 
 
 | vista  | creación  |   
 |---|---|
-|  ![user](assets/usuario.png)|![create](assets/creacionUsuario.png) |   
+|  ![client](assets/cliente.png)|![create](assets/nuevocliente.png) |   
  
 ## Vista para proyectos y creación de proyectos 
+
+| vista  | creación  |   
+|---|---|
+|  ![project](assets/proyecto.png)|![create](assets/nuevoproyecto.png) |   
+
 ## Vista para tareas y creación de tareas
+
+| vista  | creación  |   
+|---|---|
+|  ![task](assets/tarea.png)|![create](assets/nuevatarea.png) |   
 
 
