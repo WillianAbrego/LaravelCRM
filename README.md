@@ -77,7 +77,11 @@ Sin cerrar la consola donde se ejecuto el comando anterior abrir una nueva conso
 ```
 Una vez ejecutado, puedes acceder a tu aplicación en el navegador a través de la URL http://localhost:8000.
 ***
+## Base de datos
 
+![db](assets/db.png)
+
+***
 ## Instrucciones para Pruebas
 
 Posteriormente ingresar a http://127.0.0.1:8000/login e ingresar las credenciales que se crearon cuando ejecuto la migracion. 
